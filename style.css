@@ -1,0 +1,87 @@
+input::-webkit-outer-spin-button, 
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+* {
+    font-family: 'Fira Code', monospace;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    font-size: 1.3em;
+    line-height: 1.4em;
+  }
+
+#main {
+    background-color: rgb(255, 204, 0);
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    
+}
+
+tr:nth-child(even) {
+    background:rgba(234, 187, 1, 0.931);
+  }
+
+#inputs {
+    margin-top: 10px;
+} 
+
+#height, #weight {
+    display: block;
+}
+
+input {
+    width: 100%;
+    height: 2.5em;
+    padding: 2px;
+    border: 1px solid #000;
+    box-sizing: border-box;
+}
+
+button {
+    margin: 15px auto;
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+    height: 2.5em;
+    cursor: pointer;
+    transition: 100ms;
+    box-sizing: border-box;
+}
+
+button:hover {
+    background-color: rgb(255, 204, 0);
+    color: #000;
+    font-weight: bold;
+}
+
+.error {
+    background-color: rgb(255, 82, 82);
+    border: 1px black solid;
+    box-sizing: border-box;
+    padding: 2px;
+    font-weight: 500;
+}
+
+.sucess {
+    background-color: rgba(247, 222, 60, 0.931);
+    border: 1px black solid;
+    box-sizing: border-box;
+    padding: 2px;
+    font-weight: 300;    
+}
