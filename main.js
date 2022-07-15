@@ -2,7 +2,7 @@ const inputWeight = document.querySelector("#weight")
 const inputHeight = document.querySelector("#height")
 const divIMC = document.querySelector("#result")
 
-function imcCalculate() {
+function imcCompute() {
     const weight = Number(inputWeight.value)
     const height = Number(inputHeight.value)
     const imc = calculateIMC(weight, height)
@@ -37,7 +37,7 @@ function calculateIMC (weight, height) {
 
 function levelIMC(imc) {
     if (imc < 18.5) {
-        return "Peso baixo"
+        return "Abaixo do peso"
     }
     if (imc < 24.9) {
         return "Peso normal"
@@ -62,3 +62,8 @@ function paragraphCreator() {
     return p
 }
 
+document.addEventListener('keypress', function(e) {
+    if (e.keyCode === 13) {
+        imcCompute()
+    }
+});
