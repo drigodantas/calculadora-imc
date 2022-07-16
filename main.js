@@ -7,25 +7,25 @@ function imcCompute() {
     const height = Number(inputHeight.value)
     const imc = calculateIMC(weight, height)
     const p = paragraphCreator()
-    const levelimc = levelIMC(imc)
+    const levelImc = levelIMC(imc)
 
     divIMC.innerHTML = ""
     divIMC.appendChild(p)
 
-    if (height <= 0 || height === NaN || height >= 2.5) {
+    if (height <= 0 || height === NaN) {
         p.innerHTML = "Altura Inválida"
         p.classList.add('error')
         return
     }
 
-    if (weight <= 0 || weight == NaN || weight >= 250) {
+    if (weight <= 0 || weight === NaN) {
         p.innerHTML = "Peso Inválido"
         p.classList.add('error')
         return
     }
     
     p.classList.add('sucess')
-    p.innerHTML = `O seu IMC é <strong>${imc}</strong> está em <strong>${levelimc}</strong>`
+    p.innerHTML = `O seu IMC é <strong>${imc}</strong> está em <strong>${levelImc}</strong>`
 
 }
 
